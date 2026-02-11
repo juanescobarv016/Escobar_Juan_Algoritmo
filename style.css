@@ -1,0 +1,193 @@
+:root {
+  --bg: #000000;              /* Negro fondo principal */
+  --panel: #111111;           /* Negro suave para tarjetas */
+  --panel2: #1a1a1a;          /* Negro ligeramente más claro */
+  --border: #2a2a2a;          /* Gris oscuro para bordes */
+  --text: #ffffff;            /* Blanco */
+  --muted: rgba(255,255,255,.75);
+  --red: #ff1a1a;             /* Rojo principal */
+  --red-dark: #cc0000;        /* Rojo oscuro */
+  --white: #ffffff;
+
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+h1 {
+  margin: 8px 0 6px;
+  color: var(--red);
+}
+
+.sub {
+  margin: 0 0 6px;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel2);
+  color: var(--white);
+  outline: none;
+}
+
+select:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 2px rgba(255,0,0,.2);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+/* Botón principal */
+.primary {
+  background: var(--red);
+  color: var(--white);
+}
+
+.primary:hover {
+  background: var(--red-dark);
+}
+
+/* Botón secundario */
+.ghost {
+  background: var(--panel2);
+  color: var(--white);
+  border: 1px solid var(--border);
+}
+
+.ghost:hover {
+  border-color: var(--red);
+}
+
+/* Botón peligro */
+.danger {
+  background: var(--red-dark);
+  color: var(--white);
+}
+
+.question {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 12px;
+  color: var(--white);
+}
+
+.duel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@media (min-width: 900px){
+  .duel { grid-template-columns: 1fr 1fr; }
+}
+
+.pick {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  text-align: left;
+  padding: 14px;
+}
+
+.pick:hover {
+  border-color: var(--red);
+}
+
+.tag {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 26px;
+  margin-right: 10px;
+  background: var(--red);
+  color: var(--white);
+  font-weight: 900;
+}
+
+.title {
+  vertical-align: middle;
+}
+
+.topbox {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  min-height: 120px;
+}
+
+.toprow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.toprow:last-child {
+  border-bottom: 0;
+}
+
+.hint {
+  color: var(--muted);
+  margin: 10px 0 0;
+}
+
+.foot {
+  color: var(--muted);
+  padding-bottom: 28px;
+}
